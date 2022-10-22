@@ -1,0 +1,139 @@
+﻿<div class="intro">
+	<div class="intro_background" style="background-image:url(../images/intro.png)"></div>
+	<div class="container">
+		<div class="col">
+			<div class="intro_container">
+				@foreach (var flight in ViewBag.Flights)
+				{
+					<form action="/passenger/passengers">
+						<input type="hidden" name="passengers" value="@ViewBag.Passengers" />
+						<div class="flight_search">
+							<input type="hidden" name="idFlight" value="@flight.Id" />
+							<label for="start" class="flight_label">Отправка: </label>
+							<div class="start" id="start"><div class="time">@flight.Start</div></div>
+							<label for="duration" class="flight_label">Прибытие: </label>
+							<div class="duration" id="duration"><div class="time">@flight.Duration</div></div>
+							<div class="button_price"><button action="submit" class="flight_search_button">@flight.Econom BYN</button></div>
+						</div>
+
+					</form>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@section Search{
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Search for your trip</div>
+						<div class="home_search_content">
+							<form action="/flight" method="post" class="home_search_form" id="home_search_form">
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name="startAddress" placeholder="Откуда" required="required">
+									<input type="text" class="search_input search_input_2" name="arrivalAddress" placeholder="Куда" required="required">
+									<input type="date" class="search_input search_input_3" name="start" placeholder="Когда" required="required">
+									<input type="date" class="search_input search_input_4" name="duration" placeholder="Обратно" required="required">
+									<label for="adult" class="search_label">Взрослые: </label>
+									<input type="number" class="search_input search_input_5" step="1" min="1" max="5" value="1" name="adult" id="adult" />
+									<label for="kid" class="search_label">Дети: </label>
+									<input type="number" class="search_input search_input_6" step="1" min="0" max="5" value="0" name="kid" id="kid" />
+									<label for="baby" class="search_label">Младенцы: </label>
+									<input type="number" class="search_input search_input_7" step="1" min="0" max="5" value="0" name="baby" id="baby" />
+									<button class="home_search_button" type="submit">search</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	}
+	@section Home{
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="../images/footer_1.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_title">Subscribe to our newsletter to get the latest trends & news</div>
+							<div class="newsletter_subtitle">Join our database NOW!</div>
+						</div>
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+								</div>
+								<div><button class="newsletter_button">subscribe</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="../images/sign.svg" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Office Landline: +44 5567 32 664 567</li>
+										<li>Mobile: +44 5567 89 3322 332</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="../images/trekking.svg" alt=""></div>
+								<div class="footer_contact_title">come & drop by</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>4124 Barnes Street, Sanford, FL 32771</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="../images/around.svg" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>youremail@gmail.com</li>
+										<li>Office@yourbusinessname.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col text-center">
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		</div>
+	</footer>
+
+}
