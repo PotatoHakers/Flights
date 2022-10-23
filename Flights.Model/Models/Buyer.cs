@@ -8,7 +8,7 @@ namespace Flights.Model.Models
     public class Buyer:Person
     {
         public string Phone { get; set; } = string.Empty;
-        public string DeliveryAddress { get; set; } = string.Empty;
+        public string Mail { get; set; }=string.Empty;
         public List<Ticket>? Tickets { get; set; }
 
 
