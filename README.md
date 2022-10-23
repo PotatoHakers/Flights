@@ -1,3 +1,2 @@
 # Flights
-Hello world
 
