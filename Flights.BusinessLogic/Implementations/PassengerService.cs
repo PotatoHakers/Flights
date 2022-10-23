@@ -3,12 +3,7 @@ using Flights.BusinessLogic.Interfaces;
 using Flights.Common.Dto;
 using Flights.Model.Database;
 using Flights.Model.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Flights.BusinessLogic.Implementations
 {
