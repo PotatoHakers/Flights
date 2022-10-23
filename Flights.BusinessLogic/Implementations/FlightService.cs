@@ -51,11 +51,12 @@ namespace Flights.BusinessLogic.Implementations
             _context.SaveChanges();
         }
 
-    
-
-        public void Update()
+        public void UpdateSeats(int id, int countSeats)
         {
-            throw new NotImplementedException();
+            Flight flight = Find(id);
+            flight.CountSeats+=countSeats;
+            _context.Flights.Update(flight);
+            _context.SaveChanges();
         }
         private Flight Find(int id)
         {

@@ -14,8 +14,8 @@ namespace Flights.Controllers
         {
             _passengerService = passengerService;
         }
-        [Route("passengers")]
-        public ActionResult Passengers(int passengers, int idFlight)
+        [HttpPost]
+        public ActionResult Passengers([FromForm]int passengers, [FromForm] int idFlight)
         {
             ViewBag.Passengers = passengers;
             ViewBag.IdFlight = idFlight;

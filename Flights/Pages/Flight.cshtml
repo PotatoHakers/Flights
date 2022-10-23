@@ -5,7 +5,7 @@
 			<div class="intro_container">
 				@foreach (var flight in ViewBag.Flights)
 				{
-					<form action="/passenger/passengers">
+					<form action="/passenger" method="post">
 						<input type="hidden" name="passengers" value="@ViewBag.Passengers" />
 						<div class="flight_search">
 							<input type="hidden" name="idFlight" value="@flight.Id" />

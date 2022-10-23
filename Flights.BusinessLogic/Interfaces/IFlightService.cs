@@ -6,7 +6,7 @@ namespace Flights.BusinessLogic.Interfaces
         FlightDto Get(int id);
         IEnumerable<FlightDto> Get(FlightFindDto model);
         void Create(FlightDto model);
-        void Update();
+        void UpdateSeats(int id, int countSeats);
         void Delete(int id);
     }
 }

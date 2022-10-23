@@ -12,24 +12,22 @@
 						
 						<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 							<label for="firstName" class="register_label">Фамилия: </label>
-							<input type="text" id="firstName" class="register_input register_input_1" name="models[@i].firstName" placeholder="Фамилия" required="required">
+							<input type="text" id="firstName" class="register_input register_input_1" name="passengers[@i].firstName" placeholder="Фамилия" required="required">
 							<label for="firstName" class="register_label">Имя: </label>
-							<input type="text" id="lastName" class="register_input register_input_2" name="models[@i].lastName" placeholder="Имя" required="required">
+							<input type="text" id="lastName" class="register_input register_input_2" name="passengers[@i].lastName" placeholder="Имя" required="required">
 							<label for="birthDate" class="register_label">Дата рождения: </label>
-							<input type="date" id="birthDate" class="register_input register_input_3"  name="models[@i].birthDate" required="required">
+							<input type="date" id="birthDate" class="register_input register_input_3" name="passengers[@i].birthDate" required="required">
 							<label for="genders" class="register_label">Пол: </label>
-							<input list="genders" id="genders" type="text" class="register_input register_input_4" name="models[@i].gender" placeholder="Пол" required="required">
+							<input list="genders" id="genders" type="text" class="register_input register_input_4" name="passengers[@i].gender" placeholder="Пол" required="required">
 							<label for="firstName" class="register_label">Номер документа: </label>
-							<input type="text" id="doc"class="register_input search_input_5" name="models[@i].docNumber" placeholder="Номер документа" required="required">
+							<input type="text" id="doc" class="register_input search_input_5" name="passengers[@i].docNumber" placeholder="Номер документа" required="required">
 						</div>
 					}
 					<h1>Регистрация покупателя</h1>
 					<p><input type="text" name="firstName" placeholder="Введите имя" size="18" /></p>
 					<p><input type="text" name="lastName" placeholder="Введите фамилию" size="18" /></p>
 					<p><input type="text" name="phone" placeholder="Введите телефон" size="18" /></p>
-					<p><input type="text" name="altPhone" placeholder="Введите доп.телефон" size="18" /></p>
-					<p><input type="text" name="timeToConnect" placeholder="Введите время для связи" size="18" /></p>
-					<p><input type="text" name="deliveryAddress" placeholder="Введите адрес доставки" size="18" /></p>
+					<p><input type="text" name="mail" placeholder="Введите эл.почту" size="18" /></p>
 					<button class="home_search_button" type="submit">Select</button>
 				</form>
 				<datalist id="genders">
