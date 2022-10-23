@@ -1,12 +1,8 @@
 ﻿using Flights.BusinessLogic.Interfaces;
 using Flights.Model.Database;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Flights.BusinessLogic.Implementations
 {
