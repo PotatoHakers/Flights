@@ -533,6 +533,7 @@ section
 	font-weight: 500;
 	color: rgba(0,0,0,0.5);
 	margin-bottom: 10px;
+	margin-right: 1000%;
 }
 .menu_social ul li:not(:last-child)
 {

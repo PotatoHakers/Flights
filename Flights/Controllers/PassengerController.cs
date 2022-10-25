@@ -1,5 +1,4 @@
 ﻿using Flights.BusinessLogic.Interfaces;
-using Flights.Common.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flights.Controllers
